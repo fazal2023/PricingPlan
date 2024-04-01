@@ -225,3 +225,9 @@ button a:active {
     width: 100%;
   }
 }
+
+.copyright {
+  text-align: center;
+
+  margin-top: 1rem;
+}
