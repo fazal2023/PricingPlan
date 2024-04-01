@@ -56,6 +56,10 @@ h6 {
   overflow-wrap: break-word;
 }
 /* css custom properties */
+::selection {
+  background-color: #696fdd;
+  color: #fff;
+}
 :root {
   --very-light: hsl(240, 78%, 98%);
   --light-gray: #b3b5c6;
@@ -66,11 +70,9 @@ h6 {
 
 .container {
   width: 100%;
-  height: 100%;
-  padding-bottom: 10rem;
   background: linear-gradient(
     to right,
-    rgba(163, 168, 240, 0.3),
+    rgba(163, 168, 240, 0.4),
     rgba(105, 111, 221, 0.2)
   );
   position: relative;
@@ -96,7 +98,10 @@ h6 {
 }
 
 .title {
-  padding: 4rem;
+  margin: 0 auto;
+  width: 400px;
+  height: 100px;
+  padding: 5rem;
   text-align: center;
   font-weight: 700;
   color: var(--dark-gray);
@@ -108,6 +113,8 @@ h6 {
   justify-content: space-between;
   margin: 0 auto;
   max-width: 900px;
+  height: 100%;
+  padding-bottom: 10rem;
 }
 
 .card {
@@ -120,6 +127,7 @@ h6 {
   -ms-border-radius: 5px;
   -o-border-radius: 5px;
   z-index: 100;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 .card__title {
   color: var(--dark-gray);
@@ -130,7 +138,7 @@ h6 {
   margin-bottom: 1rem;
 }
 .card__price span {
-  font-size: 32px;
+  font-size: 38px;
 }
 .card__list {
   list-style: none;
@@ -163,7 +171,11 @@ button {
   padding: 0.2rem 1rem;
   margin-bottom: 0.5rem;
 }
-
+button a:link,
+button a:active {
+  text-decoration: none;
+  color: #ddd;
+}
 .active {
   color: var(--very-light);
   background: linear-gradient(to top, #696fdd, #a3a8f0);
@@ -184,9 +196,6 @@ button {
 .active__btn {
   color: #696fdd;
   background: linear-gradient(to right, #fff, #fff);
-}
-.active .card__title {
-  color: #fff;
 }
 
 /* Media Queries */
